@@ -1,0 +1,219 @@
+﻿00:02:25 scenario 1: model-a at 50,000 RPM / 100,000,000 TPM, sending 1,000 requests per second (120% of capacity) for 6m0s
+00:02:30    5s  sent 5000  accepted 5000  rejected 0 | service: completed 4158  expired 0  queued 760  in flight 82
+00:02:35   10s  sent 10000  accepted 9995  rejected 0 | service: completed 8241  expired 0  queued 1674  in flight 80
+00:02:40   15s  sent 15000  accepted 14999  rejected 0 | service: completed 12326  expired 0  queued 2588  in flight 81
+00:02:45   20s  sent 20000  accepted 19995  rejected 0 | service: completed 16398  expired 0  queued 3506  in flight 91
+00:02:50   25s  sent 25000  accepted 25000  rejected 0 | service: completed 20487  expired 0  queued 4424  in flight 86
+00:02:55   30s  sent 30000  accepted 30000  rejected 0 | service: completed 24576  expired 0  queued 5344  in flight 80
+00:03:00   35s  sent 35000  accepted 35000  rejected 0 | service: completed 28658  expired 0  queued 6260  in flight 82
+00:03:05   40s  sent 40000  accepted 39997  rejected 0 | service: completed 32741  expired 0  queued 7172  in flight 82
+00:03:10   45s  sent 45000  accepted 45000  rejected 0 | service: completed 36812  expired 0  queued 8094  in flight 94
+00:03:15   50s  sent 50000  accepted 49998  rejected 0 | service: completed 40911  expired 0  queued 9006  in flight 79
+00:03:20   55s  sent 55000  accepted 55000  rejected 0 | service: completed 44989  expired 0  queued 9927  in flight 84
+00:03:25   60s  sent 60000  accepted 59997  rejected 0 | service: completed 49078  expired 0  queued 10839  in flight 78
+00:03:30   65s  sent 65000  accepted 65000  rejected 0 | service: completed 53152  expired 0  queued 11760  in flight 88
+00:03:35   70s  sent 70000  accepted 69996  rejected 0 | service: completed 57233  expired 0  queued 12674  in flight 88
+00:03:40   75s  sent 75000  accepted 75000  rejected 0 | service: completed 61323  expired 0  queued 13589  in flight 83
+00:03:45   80s  sent 80000  accepted 79995  rejected 0 | service: completed 65403  expired 0  queued 14505  in flight 87
+00:03:50   85s  sent 85000  accepted 84995  rejected 0 | service: completed 69487  expired 0  queued 15422  in flight 86
+00:03:55   90s  sent 90000  accepted 90000  rejected 0 | service: completed 73574  expired 0  queued 16341  in flight 82
+00:04:00   95s  sent 95000  accepted 94999  rejected 0 | service: completed 77660  expired 0  queued 17256  in flight 79
+00:04:05  100s  sent 100000  accepted 100000  rejected 0 | service: completed 81749  expired 0  queued 18176  in flight 74
+00:04:10  105s  sent 105000  accepted 105000  rejected 0 | service: completed 85815  expired 0  queued 19089  in flight 91
+00:04:15  110s  sent 110000  accepted 109585  rejected 410 | service: completed 89901  expired 0  queued 19596  in flight 88
+00:04:20  115s  sent 115000  accepted 113669  rejected 1327 | service: completed 93985  expired 0  queued 19595  in flight 88
+00:04:25  120s  sent 120001  accepted 117756  rejected 2242 | service: completed 98073  expired 0  queued 19596  in flight 84
+00:04:30  125s  sent 125000  accepted 121840  rejected 3160 | service: completed 102149  expired 0  queued 19598  in flight 91
+00:04:35  130s  sent 130000  accepted 125918  rejected 4077 | service: completed 106242  expired 0  queued 19595  in flight 81
+00:04:40  135s  sent 135000  accepted 130007  rejected 4993 | service: completed 110322  expired 0  queued 19596  in flight 85
+00:04:45  140s  sent 140000  accepted 134085  rejected 5911 | service: completed 114408  expired 0  queued 19594  in flight 82
+00:04:50  145s  sent 145000  accepted 138173  rejected 6827 | service: completed 118485  expired 0  queued 19598  in flight 88
+00:04:55  150s  sent 150000  accepted 142253  rejected 7742 | service: completed 122583  expired 0  queued 19597  in flight 73
+00:05:00  155s  sent 154990  accepted 146331  rejected 8659 | service: completed 126657  expired 0  queued 19600  in flight 74
+00:05:05  160s  sent 160000  accepted 150419  rejected 9576 | service: completed 130745  expired 0  queued 19596  in flight 78
+00:05:10  165s  sent 165000  accepted 154501  rejected 10494 | service: completed 134818  expired 0  queued 19595  in flight 88
+00:05:15  170s  sent 170000  accepted 158590  rejected 11410 | service: completed 138906  expired 0  queued 19599  in flight 84
+00:05:20  175s  sent 175001  accepted 162672  rejected 12326 | service: completed 142991  expired 0  queued 19596  in flight 82
+00:05:25  180s  sent 180000  accepted 166752  rejected 13244 | service: completed 147073  expired 0  queued 19595  in flight 83
+00:05:30  185s  sent 185000  accepted 170836  rejected 14159 | service: completed 151148  expired 0  queued 19598  in flight 90
+00:05:35  190s  sent 190000  accepted 174919  rejected 15077 | service: completed 155229  expired 0  queued 19596  in flight 93
+00:05:40  195s  sent 195001  accepted 179003  rejected 15993 | service: completed 159323  expired 0  queued 19595  in flight 84
+00:05:45  200s  sent 200000  accepted 183090  rejected 16910 | service: completed 163423  expired 0  queued 19599  in flight 67
+00:05:50  205s  sent 205000  accepted 187173  rejected 17827 | service: completed 167485  expired 0  queued 19598  in flight 88
+00:05:55  210s  sent 210000  accepted 191251  rejected 18744 | service: completed 171575  expired 0  queued 19595  in flight 81
+00:06:00  215s  sent 215000  accepted 195337  rejected 19660 | service: completed 175661  expired 0  queued 19595  in flight 79
+00:06:05  220s  sent 220000  accepted 199422  rejected 20578 | service: completed 179735  expired 0  queued 19597  in flight 89
+00:06:10  225s  sent 225000  accepted 203507  rejected 21493 | service: completed 183817  expired 0  queued 19598  in flight 90
+00:06:15  230s  sent 230000  accepted 207589  rejected 22409 | service: completed 187899  expired 0  queued 19598  in flight 89
+00:06:20  235s  sent 235000  accepted 211673  rejected 23327 | service: completed 191989  expired 0  queued 19597  in flight 84
+00:06:25  240s  sent 240000  accepted 215756  rejected 24244 | service: completed 196071  expired 0  queued 19600  in flight 85
+00:06:30  245s  sent 245000  accepted 219838  rejected 25159 | service: completed 200146  expired 0  queued 19597  in flight 93
+00:06:35  250s  sent 249990  accepted 223915  rejected 26075 | service: completed 204233  expired 0  queued 19599  in flight 83
+00:06:40  255s  sent 255000  accepted 228002  rejected 26993 | service: completed 208327  expired 0  queued 19597  in flight 78
+00:06:45  260s  sent 260000  accepted 232090  rejected 27910 | service: completed 212415  expired 0  queued 19596  in flight 75
+00:06:50  265s  sent 265000  accepted 236171  rejected 28826 | service: completed 216491  expired 0  queued 19598  in flight 80
+00:06:55  270s  sent 270000  accepted 240254  rejected 29742 | service: completed 220568  expired 0  queued 19597  in flight 88
+00:07:00  275s  sent 275000  accepted 244336  rejected 30659 | service: completed 224646  expired 0  queued 19596  in flight 94
+00:07:05  280s  sent 280000  accepted 248422  rejected 31577 | service: completed 228741  expired 0  queued 19598  in flight 82
+00:07:10  285s  sent 285000  accepted 252506  rejected 32494 | service: completed 232820  expired 0  queued 19600  in flight 86
+00:07:15  290s  sent 290000  accepted 256585  rejected 33410 | service: completed 236905  expired 0  queued 19595  in flight 85
+00:07:20  295s  sent 295000  accepted 260673  rejected 34327 | service: completed 240994  expired 0  queued 19595  in flight 79
+00:07:25  300s  sent 300000  accepted 264754  rejected 35243 | service: completed 245069  expired 0  queued 19597  in flight 87
+00:07:30  305s  sent 305000  accepted 268836  rejected 36160 | service: completed 249142  expired 0  queued 19597  in flight 96
+00:07:35  310s  sent 310000  accepted 272922  rejected 37075 | service: completed 253246  expired 0  queued 19597  in flight 77
+00:07:40  315s  sent 315000  accepted 277006  rejected 37992 | service: completed 257321  expired 0  queued 19597  in flight 85
+00:07:45  320s  sent 320000  accepted 281087  rejected 38909 | service: completed 261389  expired 0  queued 19596  in flight 101
+00:07:50  325s  sent 325000  accepted 285172  rejected 39827 | service: completed 265498  expired 0  queued 19598  in flight 75
+00:07:55  330s  sent 330000  accepted 289253  rejected 40742 | service: completed 269565  expired 0  queued 19598  in flight 90
+00:08:00  335s  sent 335000  accepted 293339  rejected 41661 | service: completed 273658  expired 0  queued 19597  in flight 81
+00:08:05  340s  sent 340000  accepted 297423  rejected 42577 | service: completed 277734  expired 0  queued 19598  in flight 89
+00:08:10  345s  sent 345000  accepted 301505  rejected 43493 | service: completed 281819  expired 0  queued 19595  in flight 88
+00:08:15  350s  sent 350000  accepted 305586  rejected 44411 | service: completed 285912  expired 0  queued 19594  in flight 78
+00:08:20  355s  sent 355000  accepted 309673  rejected 45327 | service: completed 289990  expired 0  queued 19595  in flight 83
+00:08:25  360s  sent 360000  accepted 313753  rejected 46244 | service: completed 294073  expired 0  queued 19595  in flight 83
+00:08:25 sending finished: 360000 sent in 360.0s; waiting up to 1m0s for outstanding work
+00:08:30  365s  sent 360000  accepted 313756  rejected 46244 | service: completed 298152  expired 0  queued 15516  in flight 88
+00:08:35  370s  sent 360000  accepted 313756  rejected 46244 | service: completed 302229  expired 0  queued 11433  in flight 94
+00:08:40  375s  sent 360000  accepted 313756  rejected 46244 | service: completed 306332  expired 0  queued 7350  in flight 74
+00:08:45  380s  sent 360000  accepted 313756  rejected 46244 | service: completed 310403  expired 0  queued 3267  in flight 86
+00:08:50  385s  sent 360000  accepted 313756  rejected 46244 | service: completed 313756  expired 0  queued 0  in flight 0
+00:08:50 
+00:08:50   [PASS] Every request is accounted for: submitted 360000 = succeeded 313756 + failed 0 + expired 0 + rejected 46244 + waiting 0; generator sent 360000 (rejected 46244, send errors 0); unknown ids 0
+00:08:50   [PASS] At least 90% of allowed request capacity is completed after warm-up: average 49001 completed per minute after warm-up (98.0% of 50,000); lowest 60-second window 48,976; required 45,000
+00:08:50   [PASS] No 60-second period exceeds a configured limit: model-a: peak 49,105 requests and 49,105,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; 
+00:08:50 
+00:08:50 report written to reports\scenario-1-20261002-000225\report.md
+00:08:50 scenario 1: PASS
+00:08:51 scenario 2: model-a 30,000 RPM, model-b 20,000 RPM; model-a drops to 5,000 RPM at 2m0s and is restored at 5m0s
+00:08:56    5s  sent 5000  accepted 5000  rejected 0 | service: completed 4159  expired 0  queued 760  in flight 81
+00:09:01   10s  sent 10000  accepted 10000  rejected 0 | service: completed 8249  expired 0  queued 1677  in flight 74
+00:09:06   15s  sent 15000  accepted 14995  rejected 0 | service: completed 12315  expired 0  queued 2590  in flight 90
+00:09:11   20s  sent 20000  accepted 19999  rejected 0 | service: completed 16408  expired 0  queued 3505  in flight 82
+00:09:16   25s  sent 25000  accepted 25000  rejected 0 | service: completed 20483  expired 0  queued 4422  in flight 90
+00:09:21   30s  sent 30000  accepted 30000  rejected 0 | service: completed 24566  expired 0  queued 5343  in flight 90
+00:09:26   35s  sent 35000  accepted 35000  rejected 0 | service: completed 28662  expired 0  queued 6260  in flight 78
+00:09:31   40s  sent 40000  accepted 39997  rejected 0 | service: completed 32730  expired 0  queued 7172  in flight 93
+00:09:36   45s  sent 45000  accepted 45000  rejected 0 | service: completed 36816  expired 0  queued 8091  in flight 90
+00:09:41   50s  sent 50000  accepted 50000  rejected 0 | service: completed 40904  expired 0  queued 9006  in flight 86
+00:09:46   55s  sent 55000  accepted 54998  rejected 0 | service: completed 44991  expired 0  queued 9922  in flight 82
+00:09:51   60s  sent 60000  accepted 60000  rejected 0 | service: completed 49084  expired 0  queued 10844  in flight 72
+00:09:56   65s  sent 65000  accepted 65000  rejected 0 | service: completed 53158  expired 0  queued 11761  in flight 81
+00:10:01   70s  sent 70000  accepted 69996  rejected 0 | service: completed 57232  expired 0  queued 12673  in flight 90
+00:10:06   75s  sent 75000  accepted 75000  rejected 0 | service: completed 61324  expired 0  queued 13590  in flight 81
+00:10:11   80s  sent 80000  accepted 80000  rejected 0 | service: completed 65408  expired 0  queued 14509  in flight 82
+00:10:16   85s  sent 85000  accepted 84998  rejected 0 | service: completed 69495  expired 0  queued 15423  in flight 77
+00:10:21   90s  sent 90000  accepted 89995  rejected 0 | service: completed 73576  expired 0  queued 16339  in flight 80
+00:10:26   95s  sent 95000  accepted 95000  rejected 0 | service: completed 77647  expired 0  queued 17256  in flight 92
+00:10:31  100s  sent 100000  accepted 99999  rejected 0 | service: completed 81741  expired 0  queued 18174  in flight 80
+00:10:36  105s  sent 105000  accepted 105000  rejected 0 | service: completed 85825  expired 0  queued 19089  in flight 81
+00:10:41  110s  sent 110000  accepted 109588  rejected 411 | service: completed 89899  expired 0  queued 19597  in flight 90
+00:10:46  115s  sent 115000  accepted 113670  rejected 1328 | service: completed 93990  expired 0  queued 19595  in flight 82
+00:10:51 >>> model-a limit lowered to 5,000 RPM
+00:10:51  120s  sent 120000  accepted 117750  rejected 2246 | service: completed 98074  expired 0  queued 19594  in flight 81
+00:10:56  125s  sent 125000  accepted 119386  rejected 5614 | service: completed 99754  expired 0  queued 19597  in flight 35
+00:11:01  130s  sent 130000  accepted 121020  rejected 8977 | service: completed 101390  expired 919  queued 18678  in flight 32
+00:11:06  135s  sent 135000  accepted 122653  rejected 12347 | service: completed 103018  expired 3922  queued 15674  in flight 37
+00:11:11  140s  sent 140000  accepted 124286  rejected 15714 | service: completed 104658  expired 6859  queued 12739  in flight 30
+00:11:16  145s  sent 145000  accepted 125919  rejected 19081 | service: completed 106288  expired 9307  queued 10288  in flight 34
+00:11:21  150s  sent 150000  accepted 129513  rejected 20487 | service: completed 107926  expired 11758  queued 9800  in flight 29
+00:11:26  155s  sent 155000  accepted 131146  rejected 23853 | service: completed 109549  expired 11758  queued 9799  in flight 39
+00:11:31  160s  sent 160000  accepted 132779  rejected 27221 | service: completed 111182  expired 11758  queued 9799  in flight 40
+00:11:36  165s  sent 165000  accepted 134413  rejected 30587 | service: completed 112822  expired 11758  queued 9799  in flight 33
+00:11:41  170s  sent 170000  accepted 136047  rejected 33952 | service: completed 114450  expired 11758  queued 9798  in flight 39
+00:11:46  175s  sent 175000  accepted 138076  rejected 36924 | service: completed 116477  expired 11758  queued 9798  in flight 43
+00:11:51  180s  sent 180000  accepted 141268  rejected 38732 | service: completed 118520  expired 12909  queued 9797  in flight 41
+00:11:56  185s  sent 185000  accepted 143314  rejected 41686 | service: completed 120564  expired 12912  queued 9799  in flight 38
+00:12:01  190s  sent 190000  accepted 145357  rejected 44643 | service: completed 122601  expired 12912  queued 9800  in flight 44
+00:12:06  195s  sent 195000  accepted 147396  rejected 47603 | service: completed 124647  expired 12912  queued 9798  in flight 39
+00:12:11  200s  sent 200000  accepted 149436  rejected 50564 | service: completed 126686  expired 12912  queued 9796  in flight 41
+00:12:16  205s  sent 205000  accepted 151475  rejected 53525 | service: completed 128729  expired 12912  queued 9790  in flight 41
+00:12:21  210s  sent 210000  accepted 153522  rejected 56478 | service: completed 130765  expired 12912  queued 9798  in flight 46
+00:12:26  215s  sent 215000  accepted 155565  rejected 59435 | service: completed 132803  expired 12912  queued 9798  in flight 50
+00:12:31  220s  sent 220000  accepted 157606  rejected 62394 | service: completed 134849  expired 12912  queued 9795  in flight 46
+00:12:36  225s  sent 225000  accepted 159648  rejected 65351 | service: completed 136892  expired 12912  queued 9798  in flight 44
+00:12:41  230s  sent 230000  accepted 161688  rejected 68312 | service: completed 138938  expired 12912  queued 9799  in flight 39
+00:12:46  235s  sent 235000  accepted 163732  rejected 71268 | service: completed 140978  expired 12912  queued 9799  in flight 42
+00:12:51  240s  sent 240000  accepted 165772  rejected 74228 | service: completed 143014  expired 12912  queued 9796  in flight 47
+00:12:56  245s  sent 245000  accepted 167813  rejected 77187 | service: completed 145061  expired 12912  queued 9797  in flight 42
+00:13:01  250s  sent 250000  accepted 169856  rejected 80143 | service: completed 147105  expired 12912  queued 9795  in flight 40
+00:13:06  255s  sent 255000  accepted 171898  rejected 83102 | service: completed 149152  expired 12912  queued 9797  in flight 34
+00:13:11  260s  sent 260000  accepted 173937  rejected 86060 | service: completed 151178  expired 12912  queued 9797  in flight 49
+00:13:16  265s  sent 265000  accepted 175982  rejected 89018 | service: completed 153226  expired 12912  queued 9797  in flight 44
+00:13:21  270s  sent 270000  accepted 178021  rejected 91979 | service: completed 155267  expired 12912  queued 9798  in flight 44
+00:13:26  275s  sent 275000  accepted 180063  rejected 94936 | service: completed 157313  expired 12912  queued 9796  in flight 40
+00:13:31  280s  sent 280000  accepted 182107  rejected 97893 | service: completed 159352  expired 12912  queued 9797  in flight 43
+00:13:36  285s  sent 285000  accepted 184148  rejected 100852 | service: completed 161392  expired 12912  queued 9800  in flight 44
+00:13:41  290s  sent 290000  accepted 186187  rejected 103813 | service: completed 163431  expired 12912  queued 9794  in flight 47
+00:13:46  295s  sent 295000  accepted 188231  rejected 106769 | service: completed 165478  expired 12912  queued 9799  in flight 42
+00:13:51  300s  sent 300000  accepted 190272  rejected 109728 | service: completed 167522  expired 12912  queued 9797  in flight 38
+00:13:51 >>> model-a limit restored to 30,000 RPM
+00:13:56  305s  sent 305000  accepted 194884  rejected 110116 | service: completed 171556  expired 12912  queued 10329  in flight 87
+00:14:01  310s  sent 310000  accepted 199529  rejected 110470 | service: completed 175648  expired 12912  queued 10887  in flight 79
+00:14:06  315s  sent 315000  accepted 204186  rejected 110814 | service: completed 179717  expired 12912  queued 11459  in flight 93
+00:14:11  320s  sent 320000  accepted 208799  rejected 111201 | service: completed 183804  expired 12912  queued 11990  in flight 88
+00:14:16  325s  sent 325000  accepted 213446  rejected 111554 | service: completed 187887  expired 12912  queued 12556  in flight 90
+00:14:21  330s  sent 330000  accepted 218096  rejected 111904 | service: completed 191974  expired 12912  queued 13120  in flight 86
+00:14:26  335s  sent 335000  accepted 222681  rejected 112319 | service: completed 196054  expired 12912  queued 13620  in flight 90
+00:14:31  340s  sent 340000  accepted 227328  rejected 112672 | service: completed 200139  expired 12912  queued 14186  in flight 88
+00:14:36  345s  sent 345000  accepted 231987  rejected 113013 | service: completed 204233  expired 12912  queued 14760  in flight 77
+00:14:41  350s  sent 350000  accepted 236629  rejected 113371 | service: completed 208316  expired 12912  queued 15321  in flight 77
+00:14:46  355s  sent 355000  accepted 241211  rejected 113786 | service: completed 212403  expired 12912  queued 15820  in flight 74
+00:14:51  360s  sent 360000  accepted 245829  rejected 114171 | service: completed 216475  expired 12912  queued 16356  in flight 85
+00:14:56  365s  sent 365000  accepted 250428  rejected 114569 | service: completed 220551  expired 12912  queued 16870  in flight 93
+00:15:01  370s  sent 370000  accepted 255025  rejected 114975 | service: completed 224649  expired 12912  queued 17386  in flight 78
+00:15:06  375s  sent 375000  accepted 259618  rejected 115382 | service: completed 228715  expired 12912  queued 17896  in flight 95
+00:15:11  380s  sent 380000  accepted 264300  rejected 115700 | service: completed 232809  expired 12912  queued 18493  in flight 85
+00:15:16  385s  sent 385000  accepted 268967  rejected 116033 | service: completed 236900  expired 12912  queued 19078  in flight 77
+00:15:21  390s  sent 390000  accepted 273569  rejected 116431 | service: completed 240970  expired 12912  queued 19592  in flight 90
+00:15:26  395s  sent 395000  accepted 277655  rejected 117345 | service: completed 245064  expired 12912  queued 19596  in flight 79
+00:15:31  400s  sent 400000  accepted 281739  rejected 118261 | service: completed 249153  expired 12912  queued 19598  in flight 74
+00:15:36  405s  sent 405000  accepted 285820  rejected 119180 | service: completed 253220  expired 12912  queued 19596  in flight 89
+00:15:41  410s  sent 410000  accepted 289902  rejected 120098 | service: completed 257314  expired 12912  queued 19596  in flight 79
+00:15:46  415s  sent 415000  accepted 293988  rejected 121012 | service: completed 261405  expired 12912  queued 19598  in flight 72
+00:15:51  420s  sent 420000  accepted 298068  rejected 121928 | service: completed 265481  expired 12912  queued 19595  in flight 79
+00:15:56  425s  sent 425000  accepted 302153  rejected 122847 | service: completed 269563  expired 12912  queued 19598  in flight 80
+00:16:01  430s  sent 430000  accepted 306234  rejected 123761 | service: completed 273648  expired 12912  queued 19595  in flight 79
+00:16:06  435s  sent 435000  accepted 310322  rejected 124678 | service: completed 277736  expired 12912  queued 19597  in flight 74
+00:16:11  440s  sent 440000  accepted 314401  rejected 125595 | service: completed 281807  expired 12912  queued 19594  in flight 87
+00:16:16  445s  sent 445000  accepted 318481  rejected 126518 | service: completed 285886  expired 12912  queued 19590  in flight 89
+00:16:21  450s  sent 450000  accepted 322566  rejected 127434 | service: completed 289983  expired 12912  queued 19591  in flight 77
+00:16:26  455s  sent 455000  accepted 326652  rejected 128345 | service: completed 294068  expired 12912  queued 19594  in flight 76
+00:16:31  460s  sent 460000  accepted 330738  rejected 129262 | service: completed 298141  expired 12912  queued 19596  in flight 86
+00:16:36  465s  sent 465000  accepted 334820  rejected 130180 | service: completed 302226  expired 12912  queued 19595  in flight 84
+00:16:41  470s  sent 470000  accepted 338902  rejected 131098 | service: completed 306304  expired 12912  queued 19592  in flight 90
+00:16:46  475s  sent 475000  accepted 342987  rejected 132012 | service: completed 310397  expired 12912  queued 19594  in flight 80
+00:16:51  480s  sent 480000  accepted 347070  rejected 132929 | service: completed 314473  expired 12912  queued 19595  in flight 87
+00:16:51 sending finished: 480000 sent in 480.0s; waiting up to 1m0s for outstanding work
+00:16:56  485s  sent 480000  accepted 347071  rejected 132929 | service: completed 318565  expired 12912  queued 15516  in flight 78
+00:17:01  490s  sent 480000  accepted 347071  rejected 132929 | service: completed 322658  expired 12912  queued 11432  in flight 69
+00:17:06  495s  sent 480000  accepted 347071  rejected 132929 | service: completed 326720  expired 12912  queued 7349  in flight 90
+00:17:11  500s  sent 480000  accepted 347071  rejected 132929 | service: completed 330816  expired 12912  queued 3265  in flight 78
+00:17:16 
+00:17:16   [PASS] Every request is accounted for: submitted 480000 = succeeded 334159 + failed 0 + expired 12912 + rejected 132929 + waiting 0; generator sent 480000 (rejected 132929, send errors 0); unknown ids 0
+00:17:16   [PASS] No 60-second period exceeds a configured limit: model-a: peak 29,453 requests and 29,453,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; model-b: peak 19,613 requests and 19,613,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; 
+00:17:16   [PASS] Model A adjusts to the lower limit without a restart: sent 0 requests in the 2 to 40 seconds after the cut (the last minute was already over the new limit, so it must wait); then 4,900 in the final constrained minute against a limit of 5,000
+00:17:16   [PASS] Model A adjusts to the restored limit without a restart: sent 4,900 requests in seconds 2 to 12 after the restore (full pace is 5,000 per 10 s); 29,400 in the final minute against a limit of 30,000
+00:17:16   [PASS] Model B continues processing while Model A is constrained: model-b's lowest completed count in any 60-second window after warm-up was 19,587 (limit 20,000, required 18,000)
+00:17:16   [PASS] The service was not restarted: service start time 00:08:51 is unchanged and earlier than the run
+00:17:16   [PASS] The report shows configured limits and observed throughput over time: see the per-model tables under "Throughput over time": one row per 10 seconds with the limit in force and the observed rate
+00:17:16 
+00:17:16 report written to reports\scenario-2-20261002-000851\report.md
+00:17:16 scenario 2: PASS
+00:17:17 scenario 3: one batch of 10,000 requests across model-a and model-b, 5% transient and 2% permanent failures, first two callbacks rejected
+00:17:18 sending finished: 10000 sent in 1.0s; waiting up to 3m0s for outstanding work
+00:17:22    5s  sent 10000  accepted 10000  rejected 0 | service: completed 3172  expired 0  queued 6734  in flight 85
+00:17:27   10s  sent 10000  accepted 10000  rejected 0 | service: completed 7064  expired 0  queued 2842  in flight 84
+00:17:32   15s  sent 10000  accepted 10000  rejected 0 | service: completed 9330  expired 0  queued 638  in flight 29
+00:17:37   20s  sent 10000  accepted 10000  rejected 0 | service: completed 10000  expired 0  queued 0  in flight 0
+00:17:38 
+00:17:38   [PASS] Every request is accounted for: submitted 10000 = succeeded 9900 + failed 100 + expired 0 + rejected 0 + waiting 0; generator sent 10000 (rejected 0, send errors 0); unknown ids 0
+00:17:38   [PASS] The acknowledgement is returned within one second: POST /v1/batches with 10,000 requests answered 202 in 14.2 ms
+00:17:38   [PASS] The callback is sent only after all requests reach a final state: last request reached a final state at 00:17:34.742; first callback attempt arrived at 00:17:34.743 (1 ms later)
+00:17:38   [PASS] Callback delivery succeeds after the destination recovers: receiver answered 503 503 200 ; service records state "delivered" after 3 attempts; all signatures valid: true
+00:17:38   [PASS] The callback summary matches the batch status returned by the API: both report status "completed_with_failures", total 10000, succeeded 9900, failed 100 (permanent 100, retries exhausted 0, expired 0)
+00:17:38   [PASS] Every request id appears exactly once in the final batch result: 10000 result rows, 10000 unique ids, all 10000 submitted ids present once; per-request statuses add up to the summary: true
+00:17:38   [PASS] Transient and permanent failures were exercised: the provider returned 487 transient and 100 permanent failures; the service made 487 retry calls; 100 requests ended failed
+00:17:38   [PASS] No 60-second period exceeds a configured limit: model-a: peak 5,180 requests and 5,180,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; model-b: peak 5,307 requests and 5,307,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; 
+00:17:38 
+00:17:38 report written to reports\scenario-3-20261002-001717\report.md
+00:17:38 scenario 3: PASS

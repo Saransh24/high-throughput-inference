@@ -1,0 +1,24 @@
+{
+  "provider_url": "http://127.0.0.1:9090",
+  "models": {
+    "model-a": { "rpm": 50000, "tpm": 100000000 },
+    "model-b": { "rpm": 20000, "tpm": 40000000 }
+  },
+  "headroom": 0.02,
+  "burst_ms": 200,
+  "default_deadline_ms": 30000,
+  "batch_deadline_ms": 3600000,
+  "admit_fraction": 0.8,
+  "max_attempts": 4,
+  "retry_base_ms": 200,
+  "retry_max_ms": 10000,
+  "provider_timeout_ms": 30000,
+  "max_in_flight": 10000,
+  "callback": {
+    "max_attempts": 10,
+    "base_ms": 1000,
+    "max_ms": 60000,
+    "timeout_ms": 5000,
+    "secret": "dev-secret"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "name": "Scenario 3: asynchronous batch completion",
+  "started_at": "2026-10-02T00:17:17.4249175+05:30",
+  "ended_at": "2026-10-02T00:17:38.0332425+05:30",
+  "environment": {
+    "os": "windows",
+    "arch": "amd64",
+    "cpu": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+    "logical_cpus": 8,
+    "go_version": "go1.27.1"
+  },
+  "options": {
+    "name": "Scenario 3: asynchronous batch completion",
+    "service_url": "http://127.0.0.1:19091",
+    "simulator_url": "http://127.0.0.1:19090",
+    "rate_per_second": 10000,
+    "duration_ns": 1000000000,
+    "ramp_up_ns": 0,
+    "warmup_ns": 0,
+    "drain_ns": 180000000000,
+    "models": [
+      {
+        "name": "model-a",
+        "weight": 0.5
+      },
+      {
+        "name": "model-b",
+        "weight": 0.5
+      }
+    ],
+    "batch_size": 10000,
+    "tokens": 1000,
+    "token_jitter": 0,
+    "callback": true,
+    "callback_addr": "127.0.0.1:19092",
+    "callback_fail_first": 2,
+    "concurrency": 4096,
+    "id_prefix": "lg1790880437",
+    "seed": 1
+  },
+  "assumptions": [
+    "The provider is simulated; no real model is called. Latency and failures come from the simulator's configuration.",
+    "Service, simulator and load generator ran on the same machine and share its CPU.",
+    "Token usage equals each request's estimated_tokens.",
+    "A request counts as completed only when the provider call ended in success or final failure. Expired and rejected requests are not completed."
+  ],
+  "throughput": {
+    "load_seconds": 1,
+    "active_seconds": 18,
+    "completed": 10000,
+    "completed_per_second": 555.6,
+    "measured_seconds": 1,
+    "completed_per_second_after_warmup": 0,
+    "completed_per_minute_after_warmup": 0,
+    "peak_completed_in_one_second": 793,
+    "provider_calls_per_second": 508.9,
+    "submitted_per_second": 9783.2
+  },
+  "accounting": {
+    "generator": {
+      "sent": 10000,
+      "accepted": 10000,
+      "rejected": 0,
+      "send_errors": 0,
+      "ack_latency_ms": {
+        "count": 1,
+        "mean_ms": 14.221,
+        "p50_ms": 14.221,
+        "p95_ms": 14.221,
+        "p99_ms": 14.221,
+        "max_ms": 14.221
+      }
+    },
+    "service": {
+      "submitted": 10000,
+      "rejected": 0,
+      "queued": 0,
+      "in_flight": 0,
+      "retry_wait": 0,
+      "succeeded": 9900,
+      "failed": 100,
+      "expired": 0,
+      "provider_calls": 10487,
+      "provider_rate_limited": 0
+    },
+    "waiting": 0,
+    "equation_holds": true,
+    "generator_agrees": true,
+    "unknown_ids": 0
+  },
+  "models": {
+    "model-a": {
+      "configured_limits_at_end": {
+        "rpm": 30000,
+        "tpm": 60000000
+      },
+      "counts": {
+        "submitted": 4943,
+        "rejected": 0,
+        "queued": 0,
+        "in_flight": 0,
+        "retry_wait": 0,
+        "succeeded": 4885,
+        "failed": 58,
+        "expired": 0,
+        "provider_calls": 5180,
+        "provider_rate_limited": 0
+      },
+      "latency_ms": {
+        "queue": {
+          "count": 4943,
+          "mean_ms": 5076.205,
+          "p50_ms": 5142.043,
+          "p95_ms": 10016.188,
+          "p99_ms": 10370.061,
+          "max_ms": 10370.061
+        },
+        "provider": {
+          "count": 5180,
+          "mean_ms": 101.295,
+          "p50_ms": 80.464,
+          "p95_ms": 241.288,
+          "p99_ms": 417.832,
+          "max_ms": 1313.979
+        },
+        "total": {
+          "count": 4943,
+          "mean_ms": 5189.963,
+          "p50_ms": 5347.724,
+          "p95_ms": 10016.188,
+          "p99_ms": 10416.835,
+          "max_ms": 10637.313
+        }
+      },
+      "observed_by_service": {
+        "peak_requests_in_any_60s": 5180,
+        "peak_tokens_in_any_60s": 5180000
+      },
+      "observed_by_provider": {
+        "peak_requests_in_any_60s": 5180,
+        "peak_tokens_in_any_60s": 5180000,
+        "accepted": 5180,
+        "limit_rejected": 0,
+        "violations": null
+      },
+      "min_completed_in_any_60s_after_warmup": -1,
+      "timeline": [
+        {
+          "offset_s": 10,
+          "rpm_limit": 30000,
+          "tpm_limit": 60000000,
+          "sent_in_10s": 4287,
+          "sent_rolling_60s": 4287,
+          "tokens_rolling_60s": 4287000,
+          "completed_in_10s": 4044,
+          "queued": 1110
+        },
+        {
+          "offset_s": 20,
+          "rpm_limit": 30000,
+          "tpm_limit": 60000000,
+          "sent_in_10s": 893,
+          "sent_rolling_60s": 5180,
+          "tokens_rolling_60s": 5180000,
+          "completed_in_10s": 899,
+          "queued": 0
+        }
+      ]
+    },
+    "model-b": {
+      "configured_limits_at_end": {
+        "rpm": 20000,
+        "tpm": 40000000
+      },
+      "counts": {
+        "submitted": 5057,
+        "rejected": 0,
+        "queued": 0,
+        "in_flight": 0,
+        "retry_wait": 0,
+        "succeeded": 5015,
+        "failed": 42,
+        "expired": 0,
+        "provider_calls": 5307,
+        "provider_rate_limited": 0
+      },
+      "latency_ms": {
+        "queue": {
+          "count": 5057,
+          "mean_ms": 7916.953,
+          "p50_ms": 8232.576,
+          "p95_ms": 15419.461,
+          "p99_ms": 16036.239,
+          "max_ms": 16042.642
+        },
+        "provider": {
+          "count": 5307,
+          "mean_ms": 102.206,
+          "p50_ms": 80.464,
+          "p95_ms": 260.977,
+          "p99_ms": 417.832,
+          "max_ms": 960.297
+        },
+        "total": {
+          "count": 5057,
+          "mean_ms": 8032.377,
+          "p50_ms": 8232.576,
+          "p95_ms": 15419.461,
+          "p99_ms": 16036.239,
+          "max_ms": 16297.897
+        }
+      },
+      "observed_by_service": {
+        "peak_requests_in_any_60s": 5307,
+        "peak_tokens_in_any_60s": 5307000
+      },
+      "observed_by_provider": {
+        "peak_requests_in_any_60s": 5307,
+        "peak_tokens_in_any_60s": 5307000,
+        "accepted": 5307,
+        "limit_rejected": 0,
+        "violations": null
+      },
+      "min_completed_in_any_60s_after_warmup": -1,
+      "timeline": [
+        {
+          "offset_s": 10,
+          "rpm_limit": 20000,
+          "tpm_limit": 40000000,
+          "sent_in_10s": 2859,
+          "sent_rolling_60s": 2859,
+          "tokens_rolling_60s": 2859000,
+          "completed_in_10s": 2683,
+          "queued": 2513
+        },
+        {
+          "offset_s": 20,
+          "rpm_limit": 20000,
+          "tpm_limit": 40000000,
+          "sent_in_10s": 2448,
+          "sent_rolling_60s": 5307,
+          "tokens_rolling_60s": 5307000,
+          "completed_in_10s": 2374,
+          "queued": 0
+        }
+      ]
+    }
+  },
+  "limit_changes": null,
+  "batches": {
+    "submitted": 1,
+    "accepted": 1,
+    "ack_ms": {
+      "count": 1,
+      "mean_ms": 14.221,
+      "p50_ms": 14.221,
+      "p95_ms": 14.221,
+      "p99_ms": 14.221,
+      "max_ms": 14.221
+    },
+    "seconds_to_complete": {
+      "Min": 16.2978967,
+      "P50": 16.2978967,
+      "Max": 16.2978967
+    },
+    "ms_from_completion_to_delivered_callback": {
+      "Min": 3002,
+      "P50": 3002,
+      "Max": 3002
+    },
+    "batches_by_callback_attempts": {
+      "3": 1
+    },
+    "callbacks_delivered": 1,
+    "batches_with_every_id_exactly_once": 1
+  },
+  "checks": [
+    {
+      "name": "Every request is accounted for",
+      "pass": true,
+      "detail": "submitted 10000 = succeeded 9900 + failed 100 + expired 0 + rejected 0 + waiting 0; generator sent 10000 (rejected 0, send errors 0); unknown ids 0"
+    },
+    {
+      "name": "The acknowledgement is returned within one second",
+      "pass": true,
+      "detail": "POST /v1/batches with 10,000 requests answered 202 in 14.2 ms"
+    },
+    {
+      "name": "The callback is sent only after all requests reach a final state",
+      "pass": true,
+      "detail": "last request reached a final state at 00:17:34.742; first callback attempt arrived at 00:17:34.743 (1 ms later)"
+    },
+    {
+      "name": "Callback delivery succeeds after the destination recovers",
+      "pass": true,
+      "detail": "receiver answered 503 503 200 ; service records state \"delivered\" after 3 attempts; all signatures valid: true"
+    },
+    {
+      "name": "The callback summary matches the batch status returned by the API",
+      "pass": true,
+      "detail": "both report status \"completed_with_failures\", total 10000, succeeded 9900, failed 100 (permanent 100, retries exhausted 0, expired 0)"
+    },
+    {
+      "name": "Every request id appears exactly once in the final batch result",
+      "pass": true,
+      "detail": "10000 result rows, 10000 unique ids, all 10000 submitted ids present once; per-request statuses add up to the summary: true"
+    },
+    {
+      "name": "Transient and permanent failures were exercised",
+      "pass": true,
+      "detail": "the provider returned 487 transient and 100 permanent failures; the service made 487 retry calls; 100 requests ended failed"
+    },
+    {
+      "name": "No 60-second period exceeds a configured limit",
+      "pass": true,
+      "detail": "model-a: peak 5,180 requests and 5,180,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; model-b: peak 5,307 requests and 5,307,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; "
+    }
+  ]
+}

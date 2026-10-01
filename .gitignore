@@ -1,0 +1,11 @@
+# machine-specific
+LOCAL-SETUP.md
+.vscode/
+*.exe
+/bin/
+
+# generated run output (curated results are copied to docs/)
+/reports/
+
+# the assignment brief belongs to the company; keep it out of the public repo
+high-throughput-inference-assignment.pdf

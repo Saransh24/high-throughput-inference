@@ -1,0 +1,18 @@
+{
+  "models": {
+    "model-a": {
+      "rpm": 50000,
+      "tpm": 100000000,
+      "latency": { "kind": "lognormal", "p50_ms": 80, "p99_ms": 400 },
+      "transient_rate": 0.0,
+      "permanent_rate": 0.0
+    },
+    "model-b": {
+      "rpm": 20000,
+      "tpm": 40000000,
+      "latency": { "kind": "lognormal", "p50_ms": 80, "p99_ms": 400 },
+      "transient_rate": 0.0,
+      "permanent_rate": 0.0
+    }
+  }
+}

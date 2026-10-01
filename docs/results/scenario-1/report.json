@@ -1,0 +1,548 @@
+{
+  "name": "Scenario 1: reach the available provider capacity",
+  "started_at": "2026-10-02T00:02:25.060032+05:30",
+  "ended_at": "2026-10-02T00:08:50.4580334+05:30",
+  "environment": {
+    "os": "windows",
+    "arch": "amd64",
+    "cpu": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+    "logical_cpus": 8,
+    "go_version": "go1.27.1"
+  },
+  "options": {
+    "name": "Scenario 1: reach the available provider capacity",
+    "service_url": "http://127.0.0.1:19091",
+    "simulator_url": "http://127.0.0.1:19090",
+    "rate_per_second": 1000,
+    "duration_ns": 360000000000,
+    "ramp_up_ns": 0,
+    "warmup_ns": 60000000000,
+    "drain_ns": 60000000000,
+    "models": [
+      {
+        "name": "model-a",
+        "weight": 1
+      }
+    ],
+    "batch_size": 1,
+    "tokens": 1000,
+    "token_jitter": 0,
+    "callback": false,
+    "callback_addr": "127.0.0.1:19092",
+    "callback_fail_first": 0,
+    "concurrency": 4096,
+    "id_prefix": "lg1790879545",
+    "seed": 1
+  },
+  "assumptions": [
+    "The provider is simulated; no real model is called. Latency and failures come from the simulator's configuration.",
+    "Service, simulator and load generator ran on the same machine and share its CPU.",
+    "Token usage equals each request's estimated_tokens.",
+    "A request counts as completed only when the provider call ended in success or final failure. Expired and rejected requests are not completed."
+  ],
+  "throughput": {
+    "load_seconds": 360,
+    "active_seconds": 385,
+    "completed": 313756,
+    "completed_per_second": 815,
+    "measured_seconds": 300,
+    "completed_per_second_after_warmup": 816.7,
+    "completed_per_minute_after_warmup": 49000.6,
+    "peak_completed_in_one_second": 847,
+    "provider_calls_per_second": 814.1,
+    "submitted_per_second": 1000
+  },
+  "accounting": {
+    "generator": {
+      "sent": 360000,
+      "accepted": 313756,
+      "rejected": 46244,
+      "send_errors": 0,
+      "ack_latency_ms": {
+        "count": 360000,
+        "mean_ms": 0.4,
+        "p50_ms": 0.553,
+        "p95_ms": 0.786,
+        "p99_ms": 1.164,
+        "max_ms": 38.204
+      },
+      "accepted_ids_by_final_status": {
+        "succeeded": 313756
+      }
+    },
+    "service": {
+      "submitted": 360000,
+      "rejected": 46244,
+      "queued": 0,
+      "in_flight": 0,
+      "retry_wait": 0,
+      "succeeded": 313756,
+      "failed": 0,
+      "expired": 0,
+      "provider_calls": 313756,
+      "provider_rate_limited": 0
+    },
+    "waiting": 0,
+    "equation_holds": true,
+    "generator_agrees": true,
+    "unknown_ids": 0
+  },
+  "models": {
+    "model-a": {
+      "configured_limits_at_end": {
+        "rpm": 50000,
+        "tpm": 100000000
+      },
+      "counts": {
+        "submitted": 360000,
+        "rejected": 46244,
+        "queued": 0,
+        "in_flight": 0,
+        "retry_wait": 0,
+        "succeeded": 313756,
+        "failed": 0,
+        "expired": 0,
+        "provider_calls": 313756,
+        "provider_rate_limited": 0
+      },
+      "latency_ms": {
+        "queue": {
+          "count": 313756,
+          "mean_ms": 19843.981,
+          "p50_ms": 24057.547,
+          "p95_ms": 24057.547,
+          "p99_ms": 24057.547,
+          "max_ms": 24057.547
+        },
+        "provider": {
+          "count": 313756,
+          "mean_ms": 102.66,
+          "p50_ms": 83.683,
+          "p95_ms": 260.977,
+          "p99_ms": 417.832,
+          "max_ms": 1489.334
+        },
+        "total": {
+          "count": 313756,
+          "mean_ms": 19946.664,
+          "p50_ms": 24687.053,
+          "p95_ms": 24687.053,
+          "p99_ms": 24687.053,
+          "max_ms": 25486.95
+        }
+      },
+      "observed_by_service": {
+        "peak_requests_in_any_60s": 49105,
+        "peak_tokens_in_any_60s": 49105000
+      },
+      "observed_by_provider": {
+        "peak_requests_in_any_60s": 49105,
+        "peak_tokens_in_any_60s": 49105000,
+        "accepted": 313756,
+        "limit_rejected": 0,
+        "violations": null
+      },
+      "min_completed_in_any_60s_after_warmup": 48976,
+      "timeline": [
+        {
+          "offset_s": 10,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8274,
+          "sent_rolling_60s": 8274,
+          "tokens_rolling_60s": 8274000,
+          "completed_in_10s": 8192,
+          "queued": 1492
+        },
+        {
+          "offset_s": 20,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8165,
+          "sent_rolling_60s": 16439,
+          "tokens_rolling_60s": 16439000,
+          "completed_in_10s": 8158,
+          "queued": 3324
+        },
+        {
+          "offset_s": 30,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 24606,
+          "tokens_rolling_60s": 24606000,
+          "completed_in_10s": 8176,
+          "queued": 5157
+        },
+        {
+          "offset_s": 40,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8168,
+          "sent_rolling_60s": 32774,
+          "tokens_rolling_60s": 32774000,
+          "completed_in_10s": 8166,
+          "queued": 6992
+        },
+        {
+          "offset_s": 50,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8165,
+          "sent_rolling_60s": 40939,
+          "tokens_rolling_60s": 40939000,
+          "completed_in_10s": 8168,
+          "queued": 8826
+        },
+        {
+          "offset_s": 60,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49105,
+          "tokens_rolling_60s": 49105000,
+          "completed_in_10s": 8163,
+          "queued": 10659
+        },
+        {
+          "offset_s": 70,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8169,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8163,
+          "queued": 12492
+        },
+        {
+          "offset_s": 80,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8165,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8166,
+          "queued": 14325
+        },
+        {
+          "offset_s": 90,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8171,
+          "queued": 16159
+        },
+        {
+          "offset_s": 100,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48998,
+          "tokens_rolling_60s": 48998000,
+          "completed_in_10s": 8176,
+          "queued": 17992
+        },
+        {
+          "offset_s": 110,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8151,
+          "queued": 19598
+        },
+        {
+          "offset_s": 120,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8162,
+          "queued": 19597
+        },
+        {
+          "offset_s": 130,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 48998,
+          "tokens_rolling_60s": 48998000,
+          "completed_in_10s": 8190,
+          "queued": 19598
+        },
+        {
+          "offset_s": 140,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8143,
+          "queued": 19600
+        },
+        {
+          "offset_s": 150,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48999,
+          "tokens_rolling_60s": 48999000,
+          "completed_in_10s": 8178,
+          "queued": 19597
+        },
+        {
+          "offset_s": 160,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8169,
+          "sent_rolling_60s": 49002,
+          "tokens_rolling_60s": 49002000,
+          "completed_in_10s": 8166,
+          "queued": 19597
+        },
+        {
+          "offset_s": 170,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8165,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8166,
+          "queued": 19598
+        },
+        {
+          "offset_s": 180,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8163,
+          "queued": 19600
+        },
+        {
+          "offset_s": 190,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8168,
+          "queued": 19597
+        },
+        {
+          "offset_s": 200,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8182,
+          "queued": 19598
+        },
+        {
+          "offset_s": 210,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8152,
+          "queued": 19597
+        },
+        {
+          "offset_s": 220,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48998,
+          "tokens_rolling_60s": 48998000,
+          "completed_in_10s": 8174,
+          "queued": 19596
+        },
+        {
+          "offset_s": 230,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8170,
+          "queued": 19600
+        },
+        {
+          "offset_s": 240,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8168,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8156,
+          "queued": 19599
+        },
+        {
+          "offset_s": 250,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8177,
+          "queued": 19596
+        },
+        {
+          "offset_s": 260,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8166,
+          "queued": 19600
+        },
+        {
+          "offset_s": 270,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48999,
+          "tokens_rolling_60s": 48999000,
+          "completed_in_10s": 8164,
+          "queued": 19598
+        },
+        {
+          "offset_s": 280,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8168,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8169,
+          "queued": 19598
+        },
+        {
+          "offset_s": 290,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8163,
+          "queued": 19598
+        },
+        {
+          "offset_s": 300,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48998,
+          "tokens_rolling_60s": 48998000,
+          "completed_in_10s": 8163,
+          "queued": 19597
+        },
+        {
+          "offset_s": 310,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8168,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8171,
+          "queued": 19600
+        },
+        {
+          "offset_s": 320,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8156,
+          "queued": 19597
+        },
+        {
+          "offset_s": 330,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8168,
+          "queued": 19600
+        },
+        {
+          "offset_s": 340,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8169,
+          "queued": 19600
+        },
+        {
+          "offset_s": 350,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8178,
+          "queued": 19598
+        },
+        {
+          "offset_s": 360,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49001,
+          "tokens_rolling_60s": 49001000,
+          "completed_in_10s": 8162,
+          "queued": 19597
+        },
+        {
+          "offset_s": 370,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8166,
+          "sent_rolling_60s": 48999,
+          "tokens_rolling_60s": 48999000,
+          "completed_in_10s": 8160,
+          "queued": 12251
+        },
+        {
+          "offset_s": 380,
+          "rpm_limit": 50000,
+          "tpm_limit": 100000000,
+          "sent_in_10s": 8167,
+          "sent_rolling_60s": 49000,
+          "tokens_rolling_60s": 49000000,
+          "completed_in_10s": 8165,
+          "queued": 4086
+        }
+      ]
+    }
+  },
+  "limit_changes": null,
+  "checks": [
+    {
+      "name": "Every request is accounted for",
+      "pass": true,
+      "detail": "submitted 360000 = succeeded 313756 + failed 0 + expired 0 + rejected 46244 + waiting 0; generator sent 360000 (rejected 46244, send errors 0); unknown ids 0"
+    },
+    {
+      "name": "At least 90% of allowed request capacity is completed after warm-up",
+      "pass": true,
+      "detail": "average 49001 completed per minute after warm-up (98.0% of 50,000); lowest 60-second window 48,976; required 45,000"
+    },
+    {
+      "name": "No 60-second period exceeds a configured limit",
+      "pass": true,
+      "detail": "model-a: peak 49,105 requests and 49,105,000 tokens in any 60 s, 0 windows over limit, 0 calls refused by the provider; "
+    }
+  ]
+}
